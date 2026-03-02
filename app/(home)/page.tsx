@@ -11,7 +11,7 @@ export default async function Home() {
           </h1>
           <p className="text-foreground">
             A minimal and elegant issue tracking tool for teams. Manage your
-            projects with ease.
+            projects with ease
           </p>
         </div>
       </div>
