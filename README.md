@@ -56,3 +56,26 @@ To start the app, run:
 ```bash
 npm run dev
 ```
+
+## 🤖 Setup Claude Desktop
+
+To allow Claude Desktop to interact with this app via MCP, add the following configuration to your Claude Desktop config file:
+
+```json
+{
+  "mcpServers": {
+    "issues-server": {
+      "command": "/path/to/node",
+      "args": ["/path/to/main.ts"],
+      "env": {
+        "NODE_OPTIONS": "--no-deprecation",
+        "AUTH_TOKEN": "your-auth-token"
+      }
+    }
+  }
+}
+```
+
+You can locate `claude_desktop_config.json` under Settings → Developer → Edit Config.
+
+Make sure you update the `command` to your Node.js executable path, the `args` to the full path of the file and replace the `AUTH_TOKEN` value with your own valid token.
